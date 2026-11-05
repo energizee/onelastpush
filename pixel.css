@@ -1,0 +1,9 @@
+/* Pixel Bloom: original tile-based visual language, not copied game assets. */
+#world{image-rendering:pixelated;image-rendering:crisp-edges}
+body{--pixel-ink:#423e3d;--pixel-cream:#fff5e7;--pixel-rose:#b66d88}
+.nova-start{background-color:#f7eddf!important;background-image:linear-gradient(90deg,#dfe9d6 1px,transparent 1px),linear-gradient(#dfe9d6 1px,transparent 1px),radial-gradient(ellipse at 80% 20%,#f5d4de 0,transparent 55%)!important;background-size:22px 22px,22px 22px,auto!important}
+.start-content{position:relative;z-index:1}.start-content h1{letter-spacing:-.045em!important}.start-play,.primary{background:#a65d7b!important;color:white!important;border:2px solid #79445e!important;box-shadow:4px 4px 0 #d6b0b6!important}.start-play:hover,.primary:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 #d6b0b6!important}
+header,#hud,#objective,.modal{border:2px solid #b4b09c!important;box-shadow:5px 5px 0 #5a6d5b33!important}
+button{transition:filter .15s,transform .15s}button:hover{filter:brightness(1.07)}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #b65b82!important;outline-offset:3px}
+.animals button,.animal-option{border-radius:10px!important}#game{background:#a4bc91}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
