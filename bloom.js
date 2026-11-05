@@ -14,7 +14,7 @@ const jobSkills=[
  {name:'Communication',patterns:['communication','present findings','presentation','explain technical','stakeholder communication','written reports','collaboration','teamwork'],mission:[],step:'Explain a completed mission to someone in three clear sentences.'},
  {name:'Project planning',patterns:['project management','planning','prioritisation','prioritization','deadlines','time management','organise','organize','coordinate'],mission:[],step:'Plan a small project with tasks, owners and a deadline.'}
 ];
-const sampleListing=`Junior Technology Analyst — Example role\nWe're looking for someone who enjoys problem solving, analysing data and communicating findings. You'll help troubleshoot systems, work with a team and use attention to detail when testing solutions. Curiosity and willingness to learn matter more than knowing everything already.`;
+const sampleListing=`Junior Technology Analyst — Example role\nWe're a fast-paced, competitive team looking for a driven self-starter who enjoys problem solving, data analysis and clear communication. You'll troubleshoot systems, use spreadsheets and basic maths, follow procedures, and bring attention to detail to testing solutions. Curiosity and willingness to learn matter more than knowing everything already.`;
 let currentListing='',currentJobTitle='',currentAnalysis=null;
 function jobSafe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function normalise(s){return s.toLowerCase().normalize('NFKC').replace(/[\u2010-\u2015]/g,'-').replace(/[^a-z0-9+.#-]+/g,' ').replace(/\s+/g,' ').trim();}

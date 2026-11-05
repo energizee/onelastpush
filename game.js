@@ -17,7 +17,7 @@ const spriteImages={};for(const id of ['lion','crocodile','deer','hedgehog','par
 let best={},plays={},chosen='lion',started=false,light=true,reduced=false,opened=false,active=null,completed=new Set(),scores={},attempts={},state={},timerId=null,timeLeft=0,runToken=0,near=null,keys=new Set(),touch=new Set(),last=0,elapsed=0,viewW=0,viewH=0,scale=1,ratio=1;const player={x:4.5*SIZE,y:4.5*SIZE,facing:1,step:0,vx:0,vy:0,lean:0,motion:0};
 const camera={x:player.x,y:player.y};
 document.body.classList.add('light');
-function resize(){ratio=.64;viewW=innerWidth;viewH=innerHeight;canvas.width=Math.max(1,Math.round(viewW*ratio));canvas.height=Math.max(1,Math.round(viewH*ratio));g.setTransform(ratio,0,0,ratio,0,0);scale=Math.max(.55,Math.min(1.03,Math.min(viewW/950,viewH/650)))}addEventListener('resize',resize);resize();
+function resize(){ratio=1;viewW=innerWidth;viewH=innerHeight;canvas.width=Math.max(1,Math.round(viewW*ratio));canvas.height=Math.max(1,Math.round(viewH*ratio));g.setTransform(ratio,0,0,ratio,0,0);scale=Math.max(.55,Math.min(1.03,Math.min(viewW/950,viewH/650)))}addEventListener('resize',resize);resize();
 function notify(s){$('toast').textContent=s;$('toast').style.opacity=1;clearTimeout(notify.id);notify.id=setTimeout(()=>$('toast').style.opacity=0,2500)}
 function roomColor(hex){if(!light)return {'#4a7c93':'#516d62','#526da3':'#526b73','#7772a5':'#756d87','#508b7f':'#536d64','#4c819c':'#557887','#92759c':'#796778'}[hex]||hex;return {'#4a7c93':'#e9d8bd','#526da3':'#d7e6dc','#7772a5':'#e6d8e7','#508b7f':'#f0dfc5','#4c819c':'#d4e3e7','#92759c':'#e9d5d4'}[hex]||hex}
 const PIXEL_ANIMALS={
